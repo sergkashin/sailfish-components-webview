@@ -70,8 +70,8 @@ RawWebView {
     onParentChanged: webview._setActiveInPage()
 
     onViewInitialized: {
-        webview.loadFrameScript("chrome://embedlite/content/embedhelper.js");
         webview.loadFrameScript("chrome://embedlite/content/SelectAsyncHelper.js");
+        webview.loadFrameScript("chrome://embedlite/content/embedhelper.js");
         webview.addMessageListeners([
                                         "embed:linkclicked",
                                     ]);

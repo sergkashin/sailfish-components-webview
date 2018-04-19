@@ -11,7 +11,7 @@
 
 pragma Singleton
 import QtQml 2.2
-import org.nemomobile.systemsettings 1.0
+import com.jolla.settings.system 1.0
 
 QtObject {
     id: root
@@ -21,7 +21,7 @@ QtObject {
                                        || locationSettings.mlsEnabled
                                        || locationSettings.hereState == LocationSettings.OnlineAGpsEnabled)
 
-    property LocationSettings l: LocationSettings {
+    property LocationConfiguration l: LocationConfiguration {
         id: locationSettings
     }
 }
